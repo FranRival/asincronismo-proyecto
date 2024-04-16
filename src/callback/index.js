@@ -9,7 +9,15 @@ function calc(num1,num2, callback){
 console.log(calc(2, 2, sum));
 
 
+
+
+
 setTimeout(function (){
     console.log('Helloooooooo');
 }, 2000)
 
+function saludo (name){
+    console.log(`Hola ${name}`);
+}
+
+setTimeout(saludo, 2000, 'Fran')
