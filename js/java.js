@@ -1,18 +1,15 @@
 console.log("hello");
 
-//asincronismo:
-//los lenguajes son sincronos: tarea por tarea. 
-//single-threaded.  
-//bloqueante: la tarea no devuelve el control hasta que sea completado.
-//no bloqueante: una tarea devuelve el control. si se completo devuelve los datos.
-//sincrono; las tareas que se ejecutan de forma secuencal. deben esperar a quelas otras terminen.
-//asincrono: las tareas pueden ser mas tarde. 
-//concurrencia; loop de eventos.
 
-//callbacks. funcion de otra funcion. 
+//EVENT LOOP.
+ //blucle, patron de diseno que distriuye eventos en un programa. 
+ //memory heat; bojetos, funciones, elementos, destinados a un espacio de memoria gigante. en espera de ser utilizados.
 
-//promesas: no bloqueante. van a cumplor ahora, en el futuro. o nunca.
+ //call stack; pila. forma organizada. 
 
-//async. / await. 
+ //last in, last out. 
+ //task queue; cola de tareas. concurrencia. para las tareas que ya estan listas. 
+ //microtask queue; promesas de otra forma de ejecutarse. con prioridad o sin.
+ //web apis; settimeout. xmlhttprequest. dom.
 
-//js; multihilo. muchas tareas. 
+ //event loop; parte de la logica. del task queue al stack. 
