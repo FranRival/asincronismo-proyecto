@@ -1,3 +1,3 @@
 console.log("hello");
 
-//configuracion + documentacion. + herramienta: fake api + 
+//call back; es una funcion que pasa a otra funcion como argumento.
