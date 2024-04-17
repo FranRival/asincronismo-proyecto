@@ -1,4 +1,4 @@
-//npm i xmlhttprequest
+//fetch data
 
 const xmlhttprequest = requiere('xmlhttprequest')
 const API = 'https://api.escuelajs.co/api/v1' 
@@ -8,22 +8,25 @@ function fetchData(urlApi,callback){
 
     xhttp.open('GET', urlApi, true)
     xhttp.onreadystatechange = function(event){
-        if (xhttp.readyState === 4) {//el valor 4, 0. no nicializado. 
-            if (xhttp.status===200) {//200, solicitud correcta.
+        if (xhttp.readyState === 4) {
+            if (xhttp.status===200) {
                 callback(null, JSON.parse(xhttp.responseText))
             }
         }else{
-            //manejo de informacion si hay un error.\
             const error = new error('Error' + urlApi)
             return callback(error, null)
         }
     }
     xhttp.send()
-}//validando que el servidor respondio de manera correcta. y con ello obtener informacion.
+}
 
-
-
-//el 1, loading.
-//2, cuando ya se ejecuto
-//3, interactuando.
-//4, se ha completado la llamada.
+fetchData(`${API}/products`, function(error1, data1){
+    if (error1) return console.error(error1)
+    fetchData(`${API}/products/${data1[0].id}`, function(error2 , data2){
+        if (error2) return console.error(error2)
+        fetchData(`${API}/categories/${data2.categories.id}`, function (error3, data3){
+            if (error3) return console.error(error3)
+            
+        })
+    })
+})
