@@ -10,5 +10,8 @@
     "javascript"
   ],
   "author": "Fran Rivas. fran-rivaswner@outlook.es",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "xmlhttprequest": "^1.8.0"
+  }
 }
