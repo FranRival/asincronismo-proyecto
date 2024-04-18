@@ -1,6 +1,6 @@
 //fetch data
 
-const xmlhttprequest = require('xmlhttprequest').XMLHttpRequest;
+const XMLHttpRequest = require('xmlhttprequest').XMLHttpRequest;
 const API = 'https://api.escuelajs.co/api/v1' 
 
 function fetchData(urlApi,callback){
@@ -12,7 +12,7 @@ function fetchData(urlApi,callback){
             if (xhttp.status===200) {
                 callback(null, JSON.parse(xhttp.responseText))
             }else{
-                const error = new error('Error' + urlApi)
+                const error = new Error('Error' + urlApi)
                 return callback(error, null)
             }
         }
