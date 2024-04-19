@@ -1,8 +1,7 @@
-//callball hell; anidaar multiples llamadas.
-
-
-
-
+//que son las promesas:
+//elementos, peticiones, como funcionan. 
+//objeto usado para trabajar en asincronismo. 
+//ahora, manana o nunca. 
 
 
 const XMLHttpRequest = require('xmlhttprequest').XMLHttpRequest;
