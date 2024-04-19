@@ -10,7 +10,7 @@ function fetchData (urlApi){
 
 
 fetchData(`${API}/products`)
-.then(response = response.json())
+.then(response => response.json())
 .then(products => {
     console.log(products)
 })
