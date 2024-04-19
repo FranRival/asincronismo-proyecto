@@ -9,7 +9,7 @@ const promise = new Promise(function (resolve, reject){
 
 
 
-const cow = 15;
+const cow = 9;
 
 const countCows = new Promise (function (resolve, reject){
     if (cow > 10) {
@@ -21,4 +21,6 @@ const countCows = new Promise (function (resolve, reject){
 
 countCows.then((result) => {
     console.log(result);
+}).catch((error) => {
+    console.log(error);
 })
