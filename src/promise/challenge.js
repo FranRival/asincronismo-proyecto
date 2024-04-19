@@ -9,7 +9,7 @@ function fetchData (urlApi){
 }
 
 
-fetchData(`${API}/products`)
+/* fetchData(`${API}/products`)
 .then(response => response.json())
 .then(products => {
     console.log(products)
@@ -17,4 +17,15 @@ fetchData(`${API}/products`)
 .then (()=>{
     console.log('Hello');
 })
-.catch(error => console.log(error))
+.catch(error => console.log(error)) */
+
+fetchData(`${API}/products`)
+.then(response => response.json())
+.then(products => {
+    return fetchData(`${API}/products/${products[0].id}`)
+})
+.then(response => response.json())
+.then(product => {
+    return fetchData(`${API}/categories/${product.category.id}`)
+})
+.then(response => response.json())
