@@ -5,5 +5,20 @@ function* gen(){
 }
 
 
+const g = gen()
+console.log(g.next().value)
+console.log(g.next().value)
+console.log(g.next().value)
 
-//permite crear una funcion para controlar iteradores; pausar o retomar lo que queremos
+
+function* iterate(array){
+    for (let value of array){
+        yield value
+    }
+}
+
+const it = iterate(['Fran', 'Ana', 'Lucia', 'Melisa'])
+console.log(it.next().value);
+console.log(it.next().value);
+console.log(it.next().value);
+console.log(it.next().value);
